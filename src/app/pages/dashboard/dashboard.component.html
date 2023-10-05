@@ -1,0 +1,16 @@
+<div class='dashboard'>
+  <input
+    class='search'
+    type='search'
+    placeholder='🔍 Start searching for a Digimon...'
+    name='search'
+    autocomplete='off'
+    [(ngModel)]='searchText'
+  />
+
+  <!-- If I want to use the observable straight, simply use (digimonObservable | async) -->
+  <app-digimon-list
+    [digimonList]='digimonList'
+    [searchText]='searchText'
+  ></app-digimon-list>
+</div>

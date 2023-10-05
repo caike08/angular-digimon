@@ -1,1 +1,17 @@
+@use './theme/variables.scss' as *;
+
 /* You can add global styles to this file, and also import other style files */
+:host {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+}

@@ -1,0 +1,14 @@
+@use '/src/theme/mixins.scss' as *;
+
+.digimonList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+  overflow: auto;
+  list-style: none;
+}
+
+.noDigimon {
+  @include headline-4;
+  text-align: center;
+}

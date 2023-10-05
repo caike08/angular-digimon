@@ -1,0 +1,21 @@
+@use '/src/theme/mixins.scss' as *;
+
+.header {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-1);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.title {
+  @include headline-4;
+}

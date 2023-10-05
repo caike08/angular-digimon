@@ -1,0 +1,16 @@
+<!-- Digimon List Component -->
+<!-- Using local let filteredList to display the empty template if search is empty -->
+<ng-container *ngIf='digimonList | filter: searchText; let filteredList'>
+  <ng-container *ngIf='filteredList.length > 0; else noDigimon'>
+    <ul class='digimonList'>
+      <li *ngFor='let digimon of filteredList'>
+        <app-digimon-card [digimon]='digimon'></app-digimon-card>
+      </li>
+    </ul>
+  </ng-container>
+</ng-container>
+
+<!-- No Digimon Found Template -->
+<ng-template #noDigimon>
+  <h4 class='noDigimon'>Nothing to display 😢</h4>
+</ng-template>

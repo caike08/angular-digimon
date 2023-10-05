@@ -1,0 +1,31 @@
+<!-- {{ digimonObservable | async | json }} -->
+<ng-container *ngIf='(digimonObservable | async) != undefined; else noDigimon'>
+  <div class='details'>
+    <h5 class='title'>{{ (digimonObservable | async)?.name }}</h5>
+  
+    <img
+      class='image'
+      src="{{ (digimonObservable | async)?.img }}"
+      alt="{{ (digimonObservable | async)?.name }}"
+    />
+  
+    <p class='level'>
+      {{ (digimonObservable | async)?.level }}
+    </p>
+
+    <app-button (onClick)='goBack()'>
+      🔙 to Dashboard
+    </app-button>
+  </div>
+</ng-container>
+
+
+<ng-template #noDigimon>
+  <div class='noContent'>
+    <h4 class='noDigimon'>Nothing to display 😢</h4>
+  
+    <app-button (onClick)='goBack()'>
+      🔙 to Dashboard
+    </app-button>
+  </div>
+</ng-template>

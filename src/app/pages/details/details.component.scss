@@ -1,0 +1,40 @@
+@use '/src/theme/mixins.scss' as *;
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-2);
+
+  .image {
+    width: 96px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .title {
+    @include headline-5;
+  }
+
+  .level {
+    @include paragraph;
+  }
+}
+
+.noContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-2);
+}
+
+.noDigimon {
+  @include headline-4;
+  text-align: center;
+}

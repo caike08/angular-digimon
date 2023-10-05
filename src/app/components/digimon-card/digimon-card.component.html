@@ -1,0 +1,12 @@
+<!-- Digimon Card Component -->
+<div class='card'>
+  <a class='goToDetails' routerLink='/details/{{digimon.name}}'>
+    <img
+      class='image'
+      src='{{ digimon.img }}'
+      alt='{{ digimon.name }}'
+    />
+    <h5 class='title'>{{ digimon.name }}</h5>
+    <small class='small'>Level: {{ digimon.level }}</small>
+  </a>
+</div>
